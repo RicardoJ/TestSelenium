@@ -7,8 +7,6 @@ package com.mycompany.aprendiendoseleniumtests;
 
 import com.mycompany.aprendiendoseleniumtests.helpers.Helpers;
 import org.junit.AfterClass;
-
-import static org.junit.Assert.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -17,6 +15,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.junit.Assert;
 import pages.PageLogin;
+import pages.PageReservation;
+import pages.PageVerificarLogin;
 
 /**
  *
@@ -45,8 +45,19 @@ public class AppTestIT {
     public void testLogin() {
 
         PageLogin pageLogin = new PageLogin(driver);
+        PageVerificarLogin verificarLogin = new PageVerificarLogin(driver);
         pageLogin.login("user", "user");
-        Assert.assertTrue(driver.findElement(By.xpath("/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[3]/td/p/font/b")).getText().contains("Welcome back to"));
+        verificarLogin.assertVerificarLoginPage();
+            
+    }
+    @Test
+    public void testLoginPassed() {
+
+        PageLogin pageLogin = new PageLogin(driver);
+        PageReservation pageReservation = new PageReservation(driver);
+        pageLogin.login("mercury", "mercury");
+        pageReservation.assertPage();
+      
 
     }
 
