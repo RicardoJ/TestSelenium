@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="com.mycompany.aprendiendoseleniumtests.AppTestIT" time="16.698" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="com.mycompany.aprendiendoseleniumtests.AppTestIT" time="15.269" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_171\jre\bin"/>
@@ -14,7 +14,7 @@
     <property name="user.country" value="CO"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="test" value="com.mycompany.aprendiendoseleniumtests.AppTestIT"/>
+    <property name="test" value="com.mycompany.aprendiendoseleniumtests.AppTestIT#testSeleecionarPasajeros"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="D:\Users\DiazHerrera\Documents\NetBeansProjects\aprendiendoSeleniumTests"/>
     <property name="java.runtime.version" value="1.8.0_171-b11"/>
@@ -45,7 +45,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_171\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=com.mycompany.aprendiendoseleniumtests.AppTestIT -Dmaven.ext.class.path=D:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 -Prelease-profile surefire:test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=com.mycompany.aprendiendoseleniumtests.AppTestIT#testSeleecionarPasajeros -Dmaven.ext.class.path=D:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 -Prelease-profile surefire:test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="es"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -62,6 +62,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.mycompany.aprendiendoseleniumtests.AppTestIT" name="testLogin" time="3.647"/>
-  <testcase classname="com.mycompany.aprendiendoseleniumtests.AppTestIT" name="testLoginPassed" time="5.68"/>
+  <testcase classname="com.mycompany.aprendiendoseleniumtests.AppTestIT" name="testSeleecionarPasajeros" time="6.222"/>
 </testsuite>

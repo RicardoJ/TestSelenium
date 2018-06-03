@@ -30,6 +30,6 @@ public class PageLogin {
         driver.findElement(loginButton).click();
 
         Helpers helper = new Helpers();
-        helper.sleepSeconds(2);
+        helper.sleepSeconds(5);
     }
 }

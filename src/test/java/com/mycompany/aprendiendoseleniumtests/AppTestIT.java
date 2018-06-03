@@ -60,6 +60,15 @@ public class AppTestIT {
       
 
     }
+    @Test
+    public void testSeleecionarPasajeros(){
+         PageLogin pageLogin = new PageLogin(driver);
+        PageReservation pageReservation = new PageReservation(driver);
+        pageLogin.login("mercury", "mercury");
+        pageReservation.selectPassengers(2);
+        pageReservation.selectFromPort(3);
+        pageReservation.selectToPort("London");
+    }
 
     @AfterClass
     public static void tearDown() {
