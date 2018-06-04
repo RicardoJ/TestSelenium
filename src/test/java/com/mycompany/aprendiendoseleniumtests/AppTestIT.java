@@ -35,7 +35,7 @@ public class AppTestIT {
         System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window();
-        driver.get("http://newtours.demoaut.com/");
+        driver.navigate().to("http://newtours.demoaut.com/");
         Helpers helper = new Helpers();
         helper.sleepSeconds(2);
 
@@ -62,7 +62,7 @@ public class AppTestIT {
     }
     @Test
     public void testSeleecionarPasajeros(){
-         PageLogin pageLogin = new PageLogin(driver);
+        PageLogin pageLogin = new PageLogin(driver);
         PageReservation pageReservation = new PageReservation(driver);
         pageLogin.login("mercury", "mercury");
         pageReservation.selectPassengers(2);

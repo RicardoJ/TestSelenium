@@ -6,8 +6,12 @@
 package pages;
 
 import com.mycompany.aprendiendoseleniumtests.helpers.Helpers;
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  *
@@ -25,11 +29,13 @@ public class PageLogin {
         loginButton =By.name("login");
     }
     public void login (String user , String pass){
+      
         driver.findElement(userField).sendKeys(user);
         driver.findElement(passwordField).sendKeys(pass);
         driver.findElement(loginButton).click();
-
-        Helpers helper = new Helpers();
-        helper.sleepSeconds(5);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        
+//        Helpers helper = new Helpers();
+//        helper.sleepSeconds(5);
     }
 }

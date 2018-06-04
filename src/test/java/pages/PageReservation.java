@@ -8,7 +8,9 @@ package pages;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.support.ui.Select;
+
 
 /**
  *
@@ -27,8 +29,11 @@ public class PageReservation {
         fromDrop = By.name("fromPort");
         toPort = By.name("toPort");
     }
+      
     
     public void assertPage(){
+     
+      
          Assert.assertTrue(driver.findElement(paragraphText).getText().contains("Flight Finder to search"));
         
     }
@@ -42,7 +47,8 @@ public class PageReservation {
     }
     public void selectToPort(String valor){
         Select selectToPort = new Select(driver.findElement(toPort));
-        selectToPort.selectByValue(valor);
+        selectToPort.selectByValue(valor
+        );
         
     }
 }
