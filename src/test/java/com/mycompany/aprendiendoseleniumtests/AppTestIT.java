@@ -5,7 +5,8 @@
  */
 package com.mycompany.aprendiendoseleniumtests;
 
-import com.mycompany.aprendiendoseleniumtests.helpers.Helpers;
+
+import java.util.concurrent.TimeUnit;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -36,8 +37,7 @@ public class AppTestIT {
         driver = new ChromeDriver();
         driver.manage().window();
         driver.navigate().to("http://newtours.demoaut.com/");
-        Helpers helper = new Helpers();
-        helper.sleepSeconds(2);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
     }
 
