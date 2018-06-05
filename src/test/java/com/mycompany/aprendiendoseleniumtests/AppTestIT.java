@@ -6,15 +6,18 @@
 package com.mycompany.aprendiendoseleniumtests;
 
 
+
 import java.util.concurrent.TimeUnit;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.After;
 import org.junit.Test;
+import org.junit.Before;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.junit.Assert;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import com.gargoylesoftware.htmlunit.BrowserVersion;
 import pages.PageLogin;
 import pages.PageReservation;
 import pages.PageVerificarLogin;
@@ -30,12 +33,15 @@ public class AppTestIT {
     public AppTestIT() {
     }
 
-    @BeforeClass
-    public static void setUp() {
+    @Before
+    public  void setUp() {
         DesiredCapabilities caps = new DesiredCapabilities();
+      
+        
         System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
         driver = new ChromeDriver();
-        driver.manage().window();
+        
+       driver.manage().window();
         driver.navigate().to("http://newtours.demoaut.com/");
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
@@ -70,8 +76,8 @@ public class AppTestIT {
         pageReservation.selectToPort("London");
     }
 
-    @AfterClass
-    public static void tearDown() {
+    @After
+    public  void tearDown() {
         driver.close();
 
     }
