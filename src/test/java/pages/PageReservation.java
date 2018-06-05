@@ -41,21 +41,21 @@ public class PageReservation {
     }
 
     public void selectPassengers(int cantidad) {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, 5);
         WebElement passengerAmount = wait.until(ExpectedConditions.presenceOfElementLocated(passengersDrop));
         Select selectPasajeros = new Select(passengerAmount);
         selectPasajeros.selectByVisibleText(Integer.toString(cantidad));
     }
 
     public void selectFromPort(int index) {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, 5);
         WebElement elementSelectFrom = wait.until(ExpectedConditions.presenceOfElementLocated(fromDrop));
         Select selectFrom = new Select(elementSelectFrom);
         selectFrom.selectByIndex(index);
     }
 
     public void selectToPort(String valor) {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, 5);
         WebElement elementSelectToPort = wait.until(ExpectedConditions.presenceOfElementLocated(toPort));
         Select selectToPort = new Select(elementSelectToPort);
         selectToPort.selectByValue(valor);
